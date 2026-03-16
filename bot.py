@@ -215,7 +215,7 @@ def main():
     application.add_handler(CommandHandler("addmatch", addmatch))
     application.add_handler(CommandHandler("table", table))
     application.add_handler(CommandHandler("reset", reset))
-    application.add_handler(MessageHandler(filters.Text(), button_handler))
+    application.add_handler(CallbackQueryHandler(button_handler))
 
     print("Бот запущено...")
     application.run_polling()
